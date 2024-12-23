@@ -13,6 +13,7 @@ exports.UsersService = void 0;
 const common_1 = require("@nestjs/common");
 const prisma_service_1 = require("../prisma/prisma.service");
 const register_strategy_1 = require("./strategies/register.strategy");
+const argon2 = require("argon2");
 let UsersService = class UsersService {
     constructor(prisma, registerStrategy) {
         this.prisma = prisma;
@@ -23,8 +24,12 @@ let UsersService = class UsersService {
         if (!isValid) {
             throw new common_1.ConflictException(this.registerStrategy.getErrorMessage());
         }
+        const hashedPassword = await argon2.hash(createUserDto.password);
         return this.prisma.user.create({
-            data: createUserDto,
+            data: {
+                ...createUserDto,
+                password: hashedPassword,
+            },
         });
     }
     async findAll() {
