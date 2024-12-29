@@ -16,6 +16,16 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
+  @Get('enabled')
+  findEnabled() {
+    return this.usersService.findEnabled();
+  }
+
+  @Get('disabled')
+  findDisabled() {
+    return this.usersService.findDisabled();
+  }
+
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.usersService.remove(+id);

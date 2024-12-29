@@ -26,6 +26,12 @@ let UsersController = class UsersController {
     findAll() {
         return this.usersService.findAll();
     }
+    findEnabled() {
+        return this.usersService.findEnabled();
+    }
+    findDisabled() {
+        return this.usersService.findDisabled();
+    }
     remove(id) {
         return this.usersService.remove(+id);
     }
@@ -44,6 +50,18 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], UsersController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)('enabled'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], UsersController.prototype, "findEnabled", null);
+__decorate([
+    (0, common_1.Get)('disabled'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], UsersController.prototype, "findDisabled", null);
 __decorate([
     (0, common_1.Delete)(':id'),
     __param(0, (0, common_1.Param)('id')),
