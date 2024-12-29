@@ -6,25 +6,28 @@ export declare class UsersService {
     private registerStrategy;
     constructor(prisma: PrismaService, registerStrategy: RegisterStrategy);
     create(createUserDto: CreateUserDto): Promise<{
+        id: number;
         email: string;
         password: string;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
-        id: number;
     }>;
     findAll(): Promise<{
+        id: number;
         email: string;
         password: string;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
-        id: number;
     }[]>;
     remove(id: number): Promise<{
         id: number;
         email: string;
         password: string;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
