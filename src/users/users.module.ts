@@ -7,5 +7,6 @@ import { RegisterStrategy } from './strategies/register.strategy';
 @Module({
   controllers: [UsersController],
   providers: [UsersService, PrismaService, RegisterStrategy],
+  exports: [UsersService],
 })
 export class UsersModule {}
