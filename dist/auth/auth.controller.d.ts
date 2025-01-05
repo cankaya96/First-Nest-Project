@@ -9,9 +9,9 @@ export declare class AuthController {
         email: string;
         password: string;
     }): Promise<{
-        access_token: any;
+        access_token: string;
     }>;
     signup(createUserDto: CreateUserDto): Promise<{
-        access_token: any;
+        access_token: string;
     }>;
 }

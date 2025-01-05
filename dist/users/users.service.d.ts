@@ -9,7 +9,7 @@ export declare class UsersService {
         id: number;
         email: string;
         password: string;
-        role: import(".prisma/client").$Enums.Role;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
@@ -18,7 +18,7 @@ export declare class UsersService {
         id: number;
         email: string;
         password: string;
-        role: import(".prisma/client").$Enums.Role;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
@@ -27,7 +27,7 @@ export declare class UsersService {
         id: number;
         email: string;
         password: string;
-        role: import(".prisma/client").$Enums.Role;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
@@ -36,7 +36,7 @@ export declare class UsersService {
         id: number;
         email: string;
         password: string;
-        role: import(".prisma/client").$Enums.Role;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
@@ -45,7 +45,7 @@ export declare class UsersService {
         id: number;
         email: string;
         password: string;
-        role: import(".prisma/client").$Enums.Role;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
@@ -54,7 +54,7 @@ export declare class UsersService {
         id: number;
         email: string;
         password: string;
-        role: import(".prisma/client").$Enums.Role;
+        role: import("@prisma/client").$Enums.Role;
         enable: boolean;
         created_date: Date;
         modified_date: Date;
