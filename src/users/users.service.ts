@@ -33,6 +33,24 @@ export class UsersService {
     return this.prisma.user.findMany();
   }
 
+  async findEnabled() {
+    return this.prisma.user.findMany({
+      where: { enable: true },
+    });
+  }
+
+  async findDisabled() {
+    return this.prisma.user.findMany({
+      where: { enable: false },
+    });
+  }
+
+  async findByEmail(email: string) {
+    return this.prisma.user.findUnique({
+      where: { email },
+    });
+  }
+
   async remove(id: number) {
     const user = await this.prisma.user.findUnique({
       where: { id },

@@ -5,28 +5,10 @@ export declare class UsersService {
     private prisma;
     private registerStrategy;
     constructor(prisma: PrismaService, registerStrategy: RegisterStrategy);
-    create(createUserDto: CreateUserDto): Promise<{
-        email: string;
-        password: string;
-        enable: boolean;
-        created_date: Date;
-        modified_date: Date;
-        id: number;
-    }>;
-    findAll(): Promise<{
-        email: string;
-        password: string;
-        enable: boolean;
-        created_date: Date;
-        modified_date: Date;
-        id: number;
-    }[]>;
-    remove(id: number): Promise<{
-        id: number;
-        email: string;
-        password: string;
-        enable: boolean;
-        created_date: Date;
-        modified_date: Date;
-    }>;
+    create(createUserDto: CreateUserDto): Promise<any>;
+    findAll(): Promise<any>;
+    findEnabled(): Promise<any>;
+    findDisabled(): Promise<any>;
+    findByEmail(email: string): Promise<any>;
+    remove(id: number): Promise<any>;
 }
